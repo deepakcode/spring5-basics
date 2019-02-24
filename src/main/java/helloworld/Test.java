@@ -1,17 +1,14 @@
 package helloworld;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.AbstractApplicationContext;
 
-@Configuration
-@ComponentScan(basePackages = "helloworld")
+
 public class Test {
 
 	public static void main(String[] args) {
 
-		AbstractApplicationContext context = new AnnotationConfigApplicationContext(Test.class);
+		AbstractApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
 		B3 b3 = (B3) context.getBean("b3");
 
